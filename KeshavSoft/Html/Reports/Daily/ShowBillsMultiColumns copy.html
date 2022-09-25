@@ -1,0 +1,43 @@
+{{#each this}}
+<div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 fs-2">
+    <div class="col">
+        <div class="p-2 border">
+            <div class="row">
+                <div class="col">{{this.[0].DayNumber}}</div>
+                <div class="col">{{ShowInIndianDateFormat this.[0].Amount}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="row">
+            <div class="col border border-primary">
+                <div class="p-2 border">
+                    {{this.[1].DayNumber}}
+                </div>
+            </div>
+            <div class="col border border-success">
+                <div class="p-2 border">
+                    {{ShowInIndianDateFormat this.[1].Amount}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="p-2 border">
+            <div class="row">
+                <div class="col">{{this.[2].DayNumber}}</div>
+                <div class="col">{{ShowInIndianDateFormat this.[2].Amount}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="p-2 border">
+            <div class="row">
+                <div class="col">{{this.[3].DayNumber}}</div>
+                <div class="col">{{ShowInIndianDateFormat this.[3].Amount}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{/each}}

@@ -1,0 +1,57 @@
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-6">
+                <h4>Show all Inwards.</h4>
+            </div>
+            <div class="col-4">
+                <input type="text" class="form-control" name="" id="ksearch" placeholder="Type to search..."
+                    onkeyup="jFTableSearch(event)" autofocus>
+            </div>
+            <div class="col-2">
+                <div class="d-md-flex justify-content-md-end">
+                    <a href="#" onclick="jFCommonFuncsClass.JsFuncs.Transactions.Inwards.CreateNew()" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-table" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                        </svg>
+                        CreateNew
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <table class="table fs-1">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Date</th>
+                    <th>ProductName</th>
+                    <th>Qty</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each this}}
+                <tr>
+                    <td class="text-center">
+                        {{ForSNo @index}}
+                    </td>
+                    <td>
+                        {{Date}}
+                    </td>
+                    <td>
+                        {{ProductName}}
+                    </td>
+                    <td>
+                        {{Qty}}
+                    </td>
+                </tr>
+                {{/each}}
+
+            </tbody>
+        </table>
+    </div>
+</div>

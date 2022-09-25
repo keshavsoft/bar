@@ -1,0 +1,31 @@
+{
+    "Path": "KData\\JSON",
+    "DataPath": {
+        "WinPath": "KData\\JSON",
+        "UbuntuPath": "KData/JSON"
+    },
+    "Neutralino": {
+        "CommonConfig": {
+            "JsonConfig": {
+                "inFolderName": "Transactions",
+                "inJsonFileName": "NewSkml.json"
+            },
+            "ItemConfig": {
+                "inItemName": "Sales",
+                "inScreenName2": "PoswithDiscount",
+                "inScreenName": "ForPos"
+            }
+       },
+        "LoginDetails": {
+            "UserName": "SKML",
+            "Password": "SKML"
+        } 
+    },
+    "FirmDetails": {
+        "FirmName": "",
+        "FromDate": "",
+        "ToDate": "",
+        "Address": "",
+        "City": ""
+    }
+}

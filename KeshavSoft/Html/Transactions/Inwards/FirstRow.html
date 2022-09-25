@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row">
+        <div id="ShowBillId" class="col-7"></div>
+        <div class="col-5">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col">
+                            <h4>Enter Product...</h4>
+                        </div>
+
+                        <div class="col">
+                            <input type="text" class="form-control" id="ksearch" placeholder="Type to search..."
+                                onkeyup="jFTableSearch(event)" autofocus autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Item</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each this}}
+                            <tr>
+                                <td class="text-center">
+                                    {{ForSNo @index}}
+                                </td>
+                                <td>
+                                    {{ProductName}}
+                                </td>
+                                <td>
+                                    {{Price}}
+                                </td>
+
+                                <td class="text-right">
+                                    <button type="button" rel="tooltip"
+                                        onclick="jFCommonFuncsClass.JsFuncs.Transactions.Sales.SaveFuncs.StartFunc('{{ProductName}}','{{Price}}')"
+                                        class="btn btn-outline-success btn-sm">
+                                        <i class="bi bi-trash"> </i>Add
+                                    </button>
+                                </td>
+                            </tr>
+                            {{/each}}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

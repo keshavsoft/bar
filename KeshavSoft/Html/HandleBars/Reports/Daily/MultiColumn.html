@@ -1,0 +1,27 @@
+{{#each this}}
+{{log @index}}
+<tr>
+    <td class="text-center">
+        {{ForSNo @index}}
+    </td>
+    <td>
+        {{Date}}
+    </td>
+    <td>
+        {{Member}}
+    </td>
+    <td>
+        {{DayNumber}}
+    </td>
+    <td>
+        {{Amount}}
+    </td>
+
+    <td class="text-right">
+        <button type="button" rel="tooltip" class="btn btn-outline-danger btn-sm "
+            onclick="BillPrintCommonFuncs.RePrint({{PK}})" data-bs-kpk="{{pk}}">
+            <i class="bi bi-trash"> </i>RePrint
+        </button>
+    </td>
+</tr>
+{{/each}}

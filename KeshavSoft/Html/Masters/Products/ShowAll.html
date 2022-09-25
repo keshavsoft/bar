@@ -1,0 +1,96 @@
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-4">
+                <h4>All Products with prices.</h4>
+            </div>
+            <div class="col-4">
+                <input type="text" class="form-control" name="" id="ksearch" placeholder="Type to search..."
+                    onkeyup="jFCommonFuncsClass.SearchFuncs.jFTableSearchOnly(event)" autofocus>
+            </div>
+            <div class="col-2">
+                <div class="d-md-flex justify-content-md-end">
+                    <a href="#" onclick="jFCommonFuncsClass.JsFuncs.Masters.Products.Insert(event)" class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-table" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                        </svg>
+                        Insert
+                    </a>
+                </div>
+
+            </div>
+            <div class="col-2">
+                <div class="d-md-flex justify-content-md-end">
+                    <a href="#" onclick="jFCommonFuncsClass.JsFuncs.Masters.Products.CreateNew(event)"
+                        class="btn btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-table" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                        </svg>
+                        Create New
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <table class="table fs-1">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th width="70%">ProductName</th>
+                    <th width="30%">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each this}}
+                <tr>
+                    <td class="text-center">
+                        {{ForSNo @index}}
+                    </td>
+                    <td data-editable=true data-name="ProductName">
+                        {{ProductName}}
+                    </td>
+                    <td data-editable=true data-name="Price">
+                        {{Price}}
+                    </td>
+                    <td>
+                        <button type="button" rel="tooltip" class="btn btn-primary btn-icon"
+                            onclick="jFCommonFuncsClass.JsFuncs.Masters.Products.Table.TableBody.Row.Edit(event)">
+                            <i class="bi bi-pen"></i> Edit
+                        </button>
+                    </td>
+                    <td>
+                        <button type="button" rel="tooltip" class="btn btn-success btn-icon"
+                            onclick="jFCommonFuncsClass.JsFuncs.Masters.Products.Table.TableBody.Row.Update(event,{{@key}})"
+                            style="display:none;" data-updatebutton=true>
+                            <i class="bi bi-pen"></i> Update
+                        </button>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+            <tfoot id="KTFoot" style="display: none;">
+                <tr>
+                    <td class="text-center">
+                    </td>
+                    <td>
+                        <input id="ProductName" name="ProductName" class="form-control" autocomplete="off">
+                    </td>
+                    <td>
+                        <input k5="" id="Price" name="Price" type="Number" class="form-control" min="10" max="500"
+                            step="1" placeholder="Enter Rate" autocomplete="off" required>
+                    </td>
+                    <td>
+                        <button class="btn btn-success"
+                            onclick="jFCommonFuncsClass.JsFuncs.Masters.Products.Save(event)">Save</button>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>

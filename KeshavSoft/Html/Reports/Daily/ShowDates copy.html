@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <small class="col col-form-label">From Date</small>
+            <div class="col">
+                <div class="form-group">
+                    <input id="FromDate" class="form-control" type="date" autocomplete="off" autofocus required
+                        value="{{FromDate}}">
+                </div>
+            </div>
+            <label class="col col-form-label">To Date</label>
+            <div class="col">
+                <div class="form-group">
+                    <input id="ToDate" class="form-control" type="date" autocomplete="off" autofocus required
+                        value="{{ToDate}}">
+                </div>
+            </div>
+            <button onclick="jFCommonFuncsClass.JsFuncs.Reports.Daily.ShowBillsWithDateFilters(event)"
+                class="btn btn-success col d-print-none">Generate</button>
+        </div>
+    </div>
+    <div class="card-body">
+
+    </div>
+    <div class="card-footer">
+
+    </div>
+</div>

@@ -1,0 +1,68 @@
+<div class="row mb-3">
+    <label class="col-md-2 col-form-label">From Date</label>
+    <div class="col-md-2">
+        <div class="form-group">
+            <input id="FromDate" class="form-control" type="date" autocomplete="off" autofocus required>
+        </div>
+    </div>
+    <label class="col-md-2 col-form-label">To Date</label>
+    <div class="col-md-2">
+        <div class="form-group">
+            <input id="ToDate" class="form-control" type="date" autocomplete="off" autofocus required>
+        </div>
+    </div>
+    <button onclick="jFCommonFuncsClass.JsFuncs.Reports.Stock.PeriodSelection()" class="btn btn-success col-md-2">Generate</button>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <div class="row">
+            <div class="col-8">
+                <h4>Stock Balances.</h4>
+            </div>
+            <div class="col-4">
+                <input type="text" class="form-control" name="" id="ksearch" placeholder="Type to search..."
+                    onkeyup="jFTableSearch(event)" autofocus>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <table class="table fs-1">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>ProductName</th>
+                    <th>Opening</th>
+                    <th>Inwards</th>
+                    <th>Sales</th>
+                    <th>Balance</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {{#each this}}
+                <tr>
+                    <td class="text-center">
+                        {{ForSNo @index}}
+                    </td>
+                    <td>
+                        {{ProductName}}
+                    </td>
+                    <td>
+                        {{Opening}}
+                    <td>
+                        {{Inwards}}
+                    </td>
+                    <td>
+                        {{Sales}}
+                    </td>
+                    <td>
+                        {{Balance}}
+                    </td>
+
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>

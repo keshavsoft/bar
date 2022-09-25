@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar management</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+
+    <link rel="stylesheet" href="../../../css/Bs5/bootstrap.min.css">
+
+    <!-- <link rel="stylesheet" href="../../../css/Bs5/Icons/bootstrap-icons.css"> -->
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css"> -->
+
+    <style>
+        p {
+            white-space: pre;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eleventh navbar example">
+                <div class="container-fluid">
+                    <a class="navbar-brand fs-3" href="#">KeshavSoft</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarsExample09">
+                        <div class="container">
+                            <div
+                                class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                                <a href="/"
+                                    class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none fs-1">
+
+                                </a>
+
+                                <ul id="KSHtmlUl"
+                                    class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                                    <li>
+                                        <a tabindex="-1" href="#" class="nav-link text-danger"
+                                            onclick="jFCommonFuncsClass.JsFuncs.NeutralinoFuncs.QuitFunc()">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                fill="currentColor" class="bi bi-power d-block mx-auto mb-1"
+                                                viewBox="0 0 16 16">
+                                                <path d="M7.5 1v7h1V1h-1z" />
+                                                <path
+                                                    d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z" />
+                                            </svg>
+                                            Quit
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#"
+                                            onclick="jFCommonFuncsClass.JsFuncs.Masters.Products.ShowAll(event)"
+                                            class="nav-link text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                fill="currentColor" class="bi home d-block mx-auto mb-1"
+                                                viewBox="0 0 16 16">
+                                                <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"></path>
+                                                <path
+                                                    d="M3.5 15a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm9-9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm0 9a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zM16 3.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0zm-9 9a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0zm5.5 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zm-9-11a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 2a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                                            </svg>
+                                            Products
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#"
+                                            onclick="jFCommonFuncsClass.JsFuncs.Masters.Members.ShowAll(event)"
+                                            class="nav-link text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26"
+                                                fill="currentColor" class="bi home d-block mx-auto mb-1"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                                <path fill-rule="evenodd"
+                                                    d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+                                            </svg>
+                                            Members
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#"
+                                            onclick="jFCommonFuncsClass.JsFuncs.Transactions.Sales.ShowAll(event)"
+                                            class="nav-link text-info">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                fill="currentColor" class="bi home d-block mx-auto mb-1"
+                                                viewBox="0 0 16 16">
+                                                <path d="M2.5 8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"></path>
+                                                <path
+                                                    d="M5 1a2 2 0 0 0-2 2v2H2a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1v1a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2v-1h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1V3a2 2 0 0 0-2-2H5zM4 3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2H4V3zm1 5a2 2 0 0 0-2 2v1H2a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v-1a2 2 0 0 0-2-2H5zm7 2v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1z">
+                                                </path>
+
+                                            </svg>
+                                            Bills
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#"
+                                            onclick="jFCommonFuncsClass.JsFuncs.Transactions.Inwards.ShowAll(event)"
+                                            class="nav-link text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                fill="currentColor" class="bi bi-layer-backward d-block mx-auto mb-1"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M8.354 15.854a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708l1-1a.5.5 0 0 1 .708 0l.646.647V4H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H9v7.793l.646-.647a.5.5 0 0 1 .708 0l1 1a.5.5 0 0 1 0 .708l-3 3z" />
+                                                <path
+                                                    d="M1 9a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h4.5a.5.5 0 0 1 0 1H1v2h4.5a.5.5 0 0 1 0 1H1zm9.5 0a.5.5 0 0 1 0-1H15V6h-4.5a.5.5 0 0 1 0-1H15a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-4.5z" />
+                                            </svg>
+                                            Inwards
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#"
+                                            onclick="jFCommonFuncsClass.JsFuncs.Reports.Stock.PeriodWithPresentDate(event)"
+                                            class="nav-link text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                fill="currentColor" class="bi home d-block mx-auto mb-1"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M4 0h8a2 2 0 0 1 2 2v7H2V2a2 2 0 0 1 2-2zM2 12h12v2a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-2zM.5 10a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1H.5z" />
+                                            </svg>
+                                            Reports
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#"
+                                            onclick="jFCommonFuncsClass.JsFuncs.Reports.Daily.ShowDates(event)"
+                                            class="nav-link text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                fill="currentColor" class="bi home d-block mx-auto mb-1"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+                                                <path
+                                                    d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+                                            </svg>
+                                            Daily
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#"
+                                            onclick="jFCommonFuncsClass.JsFuncs.BackUp.StartFunc()"
+                                            class="nav-link text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-usb-drive d-block mx-auto mb-1" viewBox="0 0 16 16">
+                                                <path d="M6 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4H6v-4ZM7 1v1h1V1H7Zm2 0v1h1V1H9ZM6 5a1 1 0 0 0-1 1v8.5A1.5 1.5 0 0 0 6.5 16h4a1.5 1.5 0 0 0 1.5-1.5V6a1 1 0 0 0-1-1H6Zm0 1h5v8.5a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V6Z"/>
+                                              </svg>
+                                            Backup
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#"
+                                            onclick="jFCommonFuncsClass.JsFuncs.Reports.Monthly.ShowDatesForFilters(event)"
+                                            class="nav-link text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                fill="currentColor" class="bi home d-block mx-auto mb-1"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="M5 0h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2 2 2 0 0 1-2 2H3a2 2 0 0 1-2-2h1a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1H1a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v9a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1H3a2 2 0 0 1 2-2z" />
+                                                <path
+                                                    d="M1 6v-.5a.5.5 0 0 1 1 0V6h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V9h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 2.5v.5H.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1H2v-.5a.5.5 0 0 0-1 0z" />
+                                            </svg>
+                                            Monthly
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="#"
+                                            onclick="jFCommonFuncsClass.JsFuncs.Admin.Password.ShowFunc(event)"
+                                            class="nav-link text-white">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             fill="currentColor" class="bi bi-key d-block mx-auto mb-1" viewBox="0 0 16 16">
+                                                <path d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z"/>
+                                                <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                              </svg>
+                                            Password
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="KCont1">
+
+        </div>
+    </main>
+    <div class="modal fade" id="LoginModalId" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Enter client user credentials</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="LoginFormPopUpId" class="" onsubmit="return false" novalidate>
+                        <div class="mb-3 form-floating is-valid" id="UserNameRow">
+                            <input type="text" class="form-control" id="KUserNameInput" required>
+                            <label for="KUserNameInput">User Name</label>
+                            <div class="invalid-feedback">
+                                User Name cannot be empty.
+                            </div>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="mb-3 form-floating">
+                            <input type="password" class="form-control" id="KPasswordInput" required>
+                            <label for="KPasswordInput">Password</label>
+                            <div class="invalid-feedback">
+                                Password cannot be empty.
+                            </div>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <input type="submit" id="LoginModalSubmit" class=" btn btn-primary"
+                            onclick="jFCommonFuncsClass.JsFuncs.Admin.Bs5.LoginFuncs.SubmitButton.ClickFunc(event)">
+                        <!-- <button type="button" class="btn btn-primary"
+                        onclick="jVarGlobalAdmin.Login.LoginCheck()">Check</button>
+                         -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top d-print-none">
+            <div class="col-md-6 d-flex align-items-center">
+                <span class="text-muted">KeshavSoft v3.22</span>
+            </div>
+
+            <ul class="nav col-md-6 justify-content-end list-unstyled d-flex">
+                <a target="_blank" id="DataPathId" href="http://keshavsoft.com/">Data path : </a>
+            </ul>
+        </footer>
+    </div>
+    <!-- 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script> -->
+    <script src="../../../js/Bs5/bootstrap.bundle.min.js"></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script> -->
+
+    <script src="../../../js/handlebars.min-v4.7.7.js"></script>
+
+    <script src="../../../js/sweetalert2@11.js"></script>
+    <!-- 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+
+    <script src="../../../js/neutralino.js"></script>
+    <script src="../../../KeshavSoft/Routes/Masters/Products.js"></script>
+    <script src="../../../KeshavSoft/Routes/Settings/PrinterName.js"></script>
+    <script src="../../../js/Landing.js"></script>
+    <script src="../../../js/Settings/PrinterName.js"></script>
+    <script src="../../js/BillPrint.js"></script>
+
+    <script>
+        let jVarGlobalPresentViewData;
+
+        let serializeObject = (form) => {
+            // Create a new FormData object
+            const formData = new FormData(form);
+
+            // Create an object to hold the name/value pairs
+            const pairs = {};
+
+            // Add each name/value pair to the object
+            for (const [name, value] of formData) {
+                pairs[name] = value;
+            }
+
+            // Return the object
+            return pairs;
+        };
+
+        let SaveOnlyFetch = async () => {
+            let dataFromApi;
+            const inpObj = document.getElementById("kform1");
+
+            if (inpObj.checkValidity()) {
+                dataFromApi = await jFSaveOnly();
+                if (dataFromApi) {
+                    jFCommonFuncs.Api.Masters.Products.jFPullData();
+                };
+
+            } else {
+                inpObj.classList.add('was-validated');
+                inpObj.querySelector('input:invalid').focus();
+                return false;
+            };
+        };
+
+        let jFSaveOnly = async () => {
+            var form = document.getElementById("kform1");
+            let jVarLocalProjectName = "Gps";
+
+            let jVarLocalJsonConfigAndItemConfig = {
+                JsonConfig: {
+                    inFolderName: "Masters",
+                    inJsonFileName: "Items.json"
+                },
+                ItemConfig: {
+                    inItemName: "Items",
+                    inScreenName: "Create"
+                }
+            };
+
+            let jVarLocalFetchPostData = serializeObject(form);
+            return await jFCommonFuncs.Api.Masters.Products.jFPushData({ inDataToInsert: jVarLocalFetchPostData });
+        };
+
+        let jFTableSearchEnter = ({ inTableBodyFirstRow }) => {
+            let jVarLocalItemName = inTableBodyFirstRow.cells[0].innerHTML.trim();
+            let jVarLocalPrice = parseInt(inTableBodyFirstRow.cells[1].innerHTML.trim());
+
+            jFCommonFuncsClass.JsFuncs.Transactions.Sales.SaveFuncs.StartFunc(jVarLocalItemName, jVarLocalPrice);
+        };
+
+        let jFTableSearch = (inEvent) => {
+            let jVarLocalCurrentTarget = inEvent.currentTarget;
+            let jVarLocalClosestCard = jVarLocalCurrentTarget.closest(".card");
+            let jVarLocalTableBodyId = jVarLocalClosestCard.querySelector(".card-body table tbody");
+
+            var filter, table, tr, td, i;
+            filter = jVarLocalCurrentTarget.value;
+
+            for (var i = 0, row; row = jVarLocalTableBodyId.rows[i]; i++) {
+                jVarLocalTableBodyId.rows[i].classList.add("d-none");
+
+                for (var j = 0, col; col = row.cells[j]; j++) {
+                    if (col.innerHTML.includes(filter)) {
+
+                        jVarLocalTableBodyId.rows[i].classList.remove("d-none");
+
+                        break;
+                    };
+                }
+            };
+
+            if (inEvent.code === "Enter") {
+                let jVarLocalFirstRow = jVarLocalTableBodyId.querySelector("tr:not([class='d-none'])");
+
+                jFTableSearchEnter({ inTableBodyFirstRow: jVarLocalFirstRow });
+            };
+        };
+
+        jFCommonFuncsClass.JsFuncs.HandlebarsFuncs.StartFunc();
+
+        jFCommonFuncsClass.JsFuncs.Common.ToLocalStorage().then(SuccessData => {
+            jFCommonFuncsClass.JsFuncs.Common.DataList.Products.FillDataList();
+            jFCommonFuncsClass.JsFuncs.Common.DataList.Members.FillDataList();
+        });
+
+        let jVarHtmlLoginModalId = document.getElementById("LoginModalId");
+        jVarHtmlLoginModalId.addEventListener('shown.bs.modal', function (event) {
+            let jVarLocalSubmitButton = event.currentTarget.querySelector(".modal-body input[type='submit']");
+            jVarLocalSubmitButton.focus();
+        });
+
+        jFCommonFuncsClass.JsFuncs.Transactions.Sales.FirstRow();
+    </script>
+
+</body>

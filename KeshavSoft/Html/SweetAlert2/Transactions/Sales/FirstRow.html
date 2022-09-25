@@ -1,0 +1,33 @@
+<div class="fs-1">
+    <div class="row mb-3">
+        <label class="col-md-3 col-form-label">Item</label>
+        <div class="col-md-9">
+            <div class="form-group">
+                <input id="ProductName" name="ProductName" class="form-control fs-1" value={{inItemName}} disabled>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-md-3 col-form-label">Price</label>
+        <div class="col-md-5">
+            <div class="form-group">
+                <input id="Price" name="Price" type="Number" class="form-control fs-1" value={{inPrice}} disabled>
+                <div class="invalid-feedback">
+                    Should not be empty!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-md-3 col-form-label">Qty</label>
+        <div class="col-md-4">
+            <div class="form-group">
+                <input id="Qty" name="Qty" class="form-control fs-1" type="Number" value={{inQty}} max="50" min="1"
+                    onkeypress="jFCommonFuncsClass.JsFuncs.Transactions.Sales.SaveFuncs.InputKeyPress(event)">
+            </div>
+        </div>
+    </div>
+
+</div>

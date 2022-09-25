@@ -1,0 +1,12 @@
+<div class="row row-cols-5 row-cols-lg-5 g-2 g-lg-3 fs-6">
+{{#each BodyData}}
+    <div class="col">
+        <div class="border">
+            <div class="row">
+                <div class="col-4">{{DayNumber}}</div>
+                <div class="col-7 bg-light me-1 text-end">{{ShowInIndianDateFormat Amount}}</div>
+            </div>
+        </div>
+    </div>
+{{/each}}
+</div>
